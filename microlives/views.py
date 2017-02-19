@@ -2,4 +2,5 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse("Microlife home.")
+    context = {}
+    return render(request, 'microlives/index.html', context)
