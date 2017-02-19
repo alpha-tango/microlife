@@ -73,7 +73,7 @@ else:
 if DB_ENV == 'local':
     DATABASES = {'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'themenu',
+        'NAME': 'microlife',
         'HOST': 'localhost',
         'PORT': '5432'},
     }
