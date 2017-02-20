@@ -16,7 +16,7 @@ if DEBUG is False:
 else:
     SECRET_KEY = 'og8j4v$q4b9o4=25!a9h54kx5j$nh@+u-mug7yh-tf&xj$$l^*'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['microlife.herokuapp.com', 'localhost']
 
 
 # Application definition
