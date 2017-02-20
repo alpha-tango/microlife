@@ -9,32 +9,8 @@
     </div>
     <div class='login col-xs-12 col-sm-12 col-md-4 col-lg-4'>
       <div class='row'>
-        <h3>New to MicroLife? Register Here!</h3>
-      </div>
-      <div class='row'>
-        <form>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-          </div>
-          <div class="form-group">
-            <label for="inlineRadioOptions">Gender</label><br>
-            <label class="radio-inline">
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="F"> Female
-            </label>
-            <label class="radio-inline">
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="M"> Male
-            </label>
-            <label class="radio-inline">
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="O"> Prefer not to say
-            </label>
-          </div>
-          <button type="submit" class="btn btn-default">Submit</button>
-        </form>
+        <a href="" class="btn btn-lg btn-primary">Login</a><br><br>
+        <a href="{% url 'registration_register' %}" class="btn btn-lg btn-primary">Register</a>
       </div>
     </div><!-- login forms -->
   </div><!-- row -->

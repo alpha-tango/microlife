@@ -1,0 +1,81 @@
+{% extends 'microlives/layout.html' %}
+
+{% block body %}
+
+{% if form.errors %}
+  <p>Your username and password didn't match. Please try again.</p>
+{% endif %}
+
+<div class='container-fluid'>
+  <form method="post" action="/register/">
+   {% csrf_token %}
+    <div class="fieldWrapper form-group">
+      {{ form.username.errors }}
+      <div class="form-group row">
+        <div class='col-sm-1 col-form-label'>
+          {{ form.username.label_tag }}
+        </div>
+        <div class='col-sm-2'>
+          {{ form.username }}
+        </div>
+        <div class='col-sm-9'>
+          {% if form.username.help_text %}
+            <p class="help">{{ form.username.help_text|safe }}</p>
+          {% endif %}
+        </div>
+      </div><!-- row -->
+    </div><!-- form group -->
+    <div class="fieldWrapper form-group">
+      {{ form.email.errors }}
+      <div class='form-group row'>
+        <div class='col-sm-1 col-form-label'>
+          {{ form.email.label_tag }}
+        </div>
+        <div class='col-sm-2'>
+          {{ form.email }}
+        </div>
+        <div class='col-sm-9'>
+        </div>
+      </div><!-- row -->
+    </div><!-- form group -->
+    <div class="fieldWrapper form-group">
+      {{ form.password1.errors }}
+      <div class='form-group row'>
+        <div class='col-sm-1 col-form-label'>
+          {{ form.password1.label_tag }}
+        </div>
+        <div class='col-sm-2'>
+          {{ form.password1 }}
+        </div>
+        <div class='col-sm-9'>
+          {% if form.password1.help_text %}
+            <p class="help">{{ form.password1.help_text|safe }}</p>
+          {% endif %}
+        </div>
+      </div><!-- row -->
+    </div><!-- form group -->
+    <div class="fieldWrapper form-group">
+      {{ form.password2.errors }}
+      <div class='form-group row'>
+        <div class='col-sm-1 col-form-label'>
+          {{ form.password2.label_tag }}
+        </div>
+        <div class='col-sm-2'>
+          {{ form.password2 }}
+        </div>
+        <div class='col-sm-9'>
+          {% if form.password2.help_text %}
+            <p class="help">{{ form.password2.help_text|safe }}</p>
+          {% endif %}
+        </div>
+      </div><!-- row -->
+    </div><!-- form group -->
+    <div class='form-group row'>
+      <div class='col-sm-2'>
+        <input type="submit" value="Register" class='btn btn-primary'/>
+      </div>
+    </div><!-- row -->
+  </form>
+</div>
+
+{% endblock %}
