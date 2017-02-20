@@ -8,3 +8,7 @@ packaging==16.8
 psycopg2==2.6.2
 pyparsing==2.1.10
 six==1.10.0
+gunicorn==19.6.0
+ipython==5.1.0
+ipython-genutils==0.1.0
+whitenoise==3.2.2
