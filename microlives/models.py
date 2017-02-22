@@ -28,9 +28,9 @@ class MicroLife(models.Model):
 
     def __str__(self):
         return "{factor} - {gender} - {valence}".format(
-                                                    factor=risk_factor,
-                                                    gender=gender,
-                                                    valence=valence)
+                                                    factor=self.risk_factor,
+                                                    gender=self.gender,
+                                                    valence=self.valence)
 
 
 class Exposure(models.Model):
@@ -40,7 +40,7 @@ class Exposure(models.Model):
 
     def __str__(self):
         return "{factor} - {user} - {date}".format(
-                                                factor=microlife.risk_factor,
-                                                user=siteuser.user.username,
-                                                date=date
+                                                factor=self.microlife.risk_factor,
+                                                user=self.siteuser.user.username,
+                                                date=self.date
         )
