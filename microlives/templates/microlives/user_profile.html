@@ -1,0 +1,23 @@
+{% extends "microlives/layout.html" %}
+{% load staticfiles %}
+{% block body %}
+
+<div class='container-fluid'>
+  <div class='row'>
+    <div class='col-xs-12'>
+      <h1>{{ user.username }}<h1>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-xs-12'>
+      <p>{{ user.first_name }} {{ user.last_name }}<p>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-xs-12'>
+      <p>Member since {{ user.date_joined |date:"M Y" }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
